@@ -1,8 +1,83 @@
 /*!////////////////////////////////////////////////
 // THEME
 /////////////////////////////////////////////////*/
-$base-font-size: 16px;
+$font-size: 16px;
 @function em($px, $base: $base-font-size){
 	@return ($px / $base) * 1em;
+}
+
+$primaryColor: #db9140; //orange
+$secondaryColor: #352f31; //violet charcoal
+$bgColor: #211e1f; //darker violet charcoal
+
+$headline: 'Quicksand', sans-serif;
+$body: 'Open Sans', sans-serif;
+
+h1,h2{
+	font-family: $headline;
+	font-weight: 400;
+	color: #fff;
+	text-transform: uppercase;
+}
+h3{
+	font-family: $body;
+	font-weight: 400;
+	color: #fff;
+	text-transform: uppercase;
+}
+p,li{
+	font-family: $body;
+	line-height: 1.8em;
+	color: #989898;
+}
+
+
+*[class^="content"],
+footer{
+	padding: 70px 5%;
+}
+.content--light{
+	position: relative;
+	background-color: $secondaryColor;
+	-webkit-box-shadow:  inset 0 0 1px rgba(255,255,255,0.25), 0 0 10px rgba(0,0,0,0.25);
+	-moz-box-shadow:  inset 0 0 1px rgba(255,255,255,0.25), 0 0 10px rgba(0,0,0,0.25);
+	-o-box-shadow:  inset 0 0 1px rgba(255,255,255,0.25), 0 0 10px rgba(0,0,0,0.25);
+	box-shadow:  inset 0 0 1px rgba(255,255,255,0.25), 0 0 10px rgba(0,0,0,0.25);
+}
+.content--orange{
+	background-color: $primaryColor;
+	text-align: center;
+	padding: 40px 5%;
+	img{
+		margin-bottom: 10px;
+	}
+	.testimonial{
+		width: 90%;
+		max-width: 940px;
+		font-family: $body;
+		font-size: em(26px,$font-size);
+		font-weight: 400;
+		line-height: 1.6em;
+		color: #fff;
+		margin: 0 auto;
+	}
+	.testimonial__author{
+		font-family: $body;
+		font-size: em(18px,$font-size);
+		font-weight: 400;
+		line-height: 1.6em;
+		color: #fff;
+		margin-top: 20px;
+	}
+	a{
+		display: block;
+		font-family: $headline;
+		font-size: em(18px, $font-size);
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin-top: 60px;
+	}
 }
 

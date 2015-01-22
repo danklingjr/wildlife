@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:5;}
+	.st1{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:5;}
+	.st2{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+]]>
+</style>
+<image style="display:none;overflow:visible;" width="1744" height="4161" xlink:href="mock up Jpg.jpg"  transform="matrix(1 0 0 1 -1038.25 -974.041)">
+</image>
+<g>
+	<path class="st1" d="M87.5,83.8c0,2.1-1.7,3.7-3.7,3.7H16.2c-2.1,0-3.7-1.7-3.7-3.7V16.2c0-2.1,1.7-3.7,3.7-3.7h67.6
+		c2.1,0,3.7,1.7,3.7,3.7V83.8z"/>
+	<line class="st2" x1="31.2" y1="60.8" x2="31.2" y2="74.7"/>
+	<line class="st2" x1="31.2" y1="25.2" x2="31.2" y2="51.2"/>
+	<line class="st2" x1="50" y1="35.1" x2="50" y2="74.7"/>
+	<line class="st2" x1="68.8" y1="25.2" x2="68.8" y2="63.5"/>
+	<path class="st2" d="M35.8,56c0,2.6-2.1,4.8-4.8,4.8c-2.6,0-4.8-2.2-4.8-4.8c0-2.6,2.1-4.8,4.8-4.8C33.6,51.2,35.8,53.4,35.8,56z"
+		/>
+	<path class="st2" d="M54.5,30.4c0,2.6-2.1,4.8-4.8,4.8c-2.6,0-4.8-2.1-4.8-4.8c0-2.6,2.1-4.8,4.8-4.8
+		C52.4,25.6,54.5,27.7,54.5,30.4z"/>
+	<path class="st2" d="M73.3,68.3c0,2.6-2.1,4.8-4.8,4.8c-2.6,0-4.8-2.1-4.8-4.8s2.1-4.8,4.8-4.8C71.2,63.5,73.3,65.6,73.3,68.3z"/>
+</g>
+</svg>
