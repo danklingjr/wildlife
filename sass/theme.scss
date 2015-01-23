@@ -92,4 +92,8 @@ footer{
 	padding: 20px;
 	@include prefix(border-radius, 5px);
 }
-
+.page-header{
+	h1{
+		margin-bottom: 70px;
+	}
+}

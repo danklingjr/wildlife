@@ -165,6 +165,12 @@ nav[role=navigation]{
 .graph__inner--murals{
 	width: 3%;
 }
+
+.project__thumbnails{
+	h2{
+		margin-left: 1%;
+	}
+}
 .project__info{
 	position: absolute;
 	top: 0;
@@ -368,6 +374,55 @@ nav[role=navigation]{
 		margin-bottom: 20px;
 	}
 }
+
+/*
+GALLERY PAGE
+*/
+.gallery__filters{
+	a{
+		display: inline-block;
+		font-family: $headline;
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin-bottom: 10px;
+		&:hover,
+		&:focus{
+			color: $primaryColor;
+		}
+	}
+	span{
+		color: #fff;
+		margin: 0 5px;
+	}
+}
+.gallery__search{
+	form{	
+		width: 100%;
+		max-width: 300px;
+		text-align: right;
+		float: right;
+	}
+	input{
+		display: block;
+		width: 100%;
+		max-width: 300px;
+		border: none;
+		@include prefix(border-radius, 5px);
+		background-color: $secondaryColor;
+		font-family: $body;
+		color: #fff;
+		padding: 15px;
+		margin-bottom: 20px;
+	}
+}
+.gallery__thumbnail{
+	min-height: 200px;
+	background-color: $secondaryColor
+}
+
+
 .footer__contact{
 	form{
 		input[type=text],textarea{

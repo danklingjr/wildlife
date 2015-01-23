@@ -30,6 +30,10 @@
         float: left;
         @include gridRow(1, 1.515151515152%);
     }
+    .grid-fifths {
+        float: left;
+        @include gridRow(2, 1.515151515152%);
+    }
 
     .gallery .grid-unit,
     .grid-half {
@@ -66,6 +70,9 @@
         // width: 96.969696969697%;
         @include gridRow(1, 1.515151515152%);
     }
+    .grid-fifths { 
+        @include gridRow(5, 1.515151515152%);
+    }
 
     /* If there are no margins */
     .grid-1.no-margin {
@@ -95,6 +102,9 @@
 
     .grid-25.no-margin {
         @include gridRow(4, 0);
+    }
+    .grid-fifths.no-margin {
+        @include gridRow(5, 0);
     }
 
     .gallery .grid-unit {
