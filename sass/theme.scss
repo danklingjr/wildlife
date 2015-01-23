@@ -9,6 +9,7 @@ $font-size: 16px;
 $primaryColor: #db9140; //orange
 $secondaryColor: #352f31; //violet charcoal
 $bgColor: #211e1f; //darker violet charcoal
+$textColor: #989898; //gray
 
 $headline: 'Quicksand', sans-serif;
 $body: 'Open Sans', sans-serif;
@@ -28,7 +29,7 @@ h3{
 p,li{
 	font-family: $body;
 	line-height: 1.8em;
-	color: #989898;
+	color: $textColor;
 }
 
 
@@ -79,5 +80,16 @@ footer{
 		text-decoration: none;
 		margin-top: 60px;
 	}
+}
+.button{
+	background-color: $primaryColor;
+	border: none;
+	font-family: $headline;
+	font-weight: 700;
+	font-size: em(16px,$font-size);
+	color: #fff;
+	text-transform: uppercase;
+	padding: 20px;
+	@include prefix(border-radius, 5px);
 }
 

@@ -9,8 +9,10 @@
 body{
 	background-color: $bgColor;
 }
-header[role=banner]{
+header[role=banner],.phantom{
+	width: 100%;
 	position: relative;
+	z-index: 3;
 	background: #272123; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMTAwJSIgeDI9IjEwMCUiIHkyPSIwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjcyMTIzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIxMWIxZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
@@ -31,6 +33,7 @@ header[role=banner]{
 .branding{
 	display: inline-block;
 	margin-right: 5%;
+	float: left;
 }
 nav[role=navigation]{
 	float: right;
@@ -46,6 +49,18 @@ nav[role=navigation]{
 			text-decoration: none;
 			margin: 0 10px;
 		}
+	}
+}
+.phantom{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	padding: 20px 5% !important;
+	nav[role=navigation]{
+		margin: 5px 0 0;
+	}
+	.branding img{
+		width: 300px !important;
 	}
 }
 .selected{
@@ -88,11 +103,18 @@ nav[role=navigation]{
 		stroke-width:3;
 		stroke-linejoin:round;
 		stroke-miterlimit:5;
+
 		fill: none;
 		display: inline-block;
 		vertical-align: top;
 		margin-top: -5px;
+
 	}
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 .service__info{
 	display: inline-block;
@@ -117,6 +139,7 @@ nav[role=navigation]{
 	background-color: #000;
 	padding: 2px;
 	margin-bottom: 10px;
+	@include prefix(border-radius,10px);
 }
 .graph__title{
 	font-family: $headline;
@@ -128,6 +151,7 @@ nav[role=navigation]{
 *[class^="graph__inner"]{
 	background-color: $primaryColor;
 	height: 15px;
+	@include prefix(border-radius,10px);
 }
 .graph__inner--taxidermy{
 	width: 72%;
@@ -141,6 +165,98 @@ nav[role=navigation]{
 .graph__inner--murals{
 	width: 3%;
 }
+.project__info{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $primaryColor; 
+	opacity: 0;
+	text-align: center;
+	@include prefix(transition, 0.2s ease-in-out);
+	svg{
+		opacity: 0;
+		width: 10px;
+		stroke: #fff;
+		stroke-width:3;
+		stroke-linejoin:round;
+		stroke-miterlimit:5;
+
+		fill: #fff;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		@include prefix(transition, 0.3s ease-in-out);
+	}
+}
+
+.project__large,
+.project__medium,
+.project__small{
+	position: relative;
+	background-color: $primaryColor; 
+	margin-bottom: 20px;
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	box-shadow: 0 0 10px rgba(0,0,0,0.25);
+	overflow: hidden;
+	img{
+		width: 100%;
+		display: block;
+	}
+	a{
+		display: block;
+	}
+}
+.project__small a:after,
+.project__medium a:after,
+.project__large a:after{
+	content: "";
+	opacity: 1 !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 1px solid rgba(255,255,255,0.10);
+}
+.project__large:hover,
+.project__medium:hover,
+.project__small:hover,
+.project__large:focus,
+.project__medium:focus,
+.project__small:focus{
+	.project__info{
+		opacity: 0.92;
+		svg{
+			opacity: 1;
+			width: 50px;
+		}
+	}
+}
+
+.featured--large{
+	width: 48%;
+	float: left;
+	margin: 1%;
+}
+.featured--small{
+	width: 23%;
+	float: left;
+	margin: 1%;
+	.button{
+		display: block;
+		width: 100%;
+		text-decoration: none;
+		text-align: center;
+		padding: 25px 0;
+	}
+}
+
+
 .video{
 	width: 65%;
 	padding-right: 20px;
@@ -239,6 +355,17 @@ nav[role=navigation]{
 .sitemap--work{
 	li{
 		list-style: none;
+		a{
+			color: $textColor;
+			text-decoration: none;
+		}
+	}
+}
+.recent-photos,
+.sitemap--work,
+.footer__contact{
+	h2{
+		margin-bottom: 20px;
 	}
 }
 .footer__contact{
@@ -257,7 +384,9 @@ nav[role=navigation]{
 		}
 	}
 }
-
+.copyright{
+	margin-top: 30px;
+}
 
 /*!////////////////////////////////////////////////
 // STATES
