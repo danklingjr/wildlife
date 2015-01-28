@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!////////////////////////////////////////////////
 // BASE
 /////////////////////////////////////////////////*/
@@ -588,7 +589,15 @@ nav[role=navigation] {
     margin-top: -5px; }
 
 .service__list li {
-  margin-left: 20px !important; }
+  position: relative;
+  margin-left: 20px !important;
+  list-style: none; }
+  .service__list li:after {
+    content: "•";
+    font-size: 1.5em;
+    color: #db9140;
+    position: absolute;
+    left: -20px; }
 
 @keyframes draw {
   to {
@@ -726,6 +735,19 @@ nav[role=navigation] {
     -moz-transition: 0.2s ease-in-out;
     -o-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out; }
+  .project__info div {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out; }
+  .project__info h3 {
+    margin-top: -50px;
+    margin-bottom: -25px; }
 
 .project__large,
 .project__medium,
@@ -951,8 +973,36 @@ GALLERY PAGE
 
 .service__wrap h2 {
   margin-bottom: 20px; }
-.service__wrap .service__info p {
+.service__wrap .service__info--page p {
   margin-bottom: 20px; }
+
+.project {
+  background-color: #352f31;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08); }
+  .project figure {
+    position: relative;
+    margin-bottom: 20px; }
+    .project figure img {
+      width: 100%; }
+    .project figure:hover .project__info {
+      opacity: 0.92; }
+      .project figure:hover .project__info svg {
+        opacity: 1;
+        width: 50px; }
+  .project h2 {
+    font-size: 1.25em; }
+    .project h2 a {
+      color: #fff;
+      text-decoration: none; }
+      .project h2 a:hover, .project h2 a:focus {
+        color: #db9140; }
+  .project time {
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.875em;
+    color: #656565;
+    margin-bottom: 20px; }
 
 .footer__contact form input[type=text], .footer__contact form textarea {
   display: block;

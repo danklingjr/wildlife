@@ -117,7 +117,16 @@ nav[role=navigation]{
 }
 .service__list{
 	li{
+		position: relative;
 		margin-left: 20px !important;
+		list-style: none;
+		&:after{
+			content: "•";
+			font-size: 1.5em;
+			color: $primaryColor;
+			position: absolute;
+			left: -20px;
+		}
 	}
 }
 @keyframes draw {
@@ -267,6 +276,18 @@ nav[role=navigation]{
 		top: 50%;
 		transform: translateY(-50%);
 		@include prefix(transition, 0.2s ease-in-out);
+	}
+	div{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		@include prefix(transition, 0.2s ease-in-out);
+	}
+	h3{
+		margin-top: -50px;
+		margin-bottom: -25px;
 	}
 }
 
@@ -532,13 +553,53 @@ GALLERY PAGE
 	h2{
 		margin-bottom: 20px;
 	}
-	.service__info{
+	.service__info--page{
 		p{
 			margin-bottom: 20px;
 		}
 	}
 }
 
+
+.project{
+	background-color: $secondaryColor;
+	padding: 20px;
+	border: 1px solid rgba(255,255,255,0.08);
+	figure{
+		position: relative;
+		margin-bottom: 20px;
+		img{
+			width: 100%;
+		}
+		&:hover{
+			.project__info{
+				opacity: 0.92;
+				svg{
+					opacity: 1;
+					width: 50px;
+				}
+			}
+		}
+	}
+	h2{
+		font-size: em(20px, $font-size);
+		a{
+			color: #fff;
+			text-decoration: none;
+			&:hover,
+			&:focus{
+				color: $primaryColor;
+			}
+		}
+	}
+	time{
+		display: inline-block;
+		font-family: $body;
+		font-size: em(14px,$font-size);
+		color: darken($textColor,20);
+		margin-bottom: 20px;
+	}
+}
 
 
 .footer__contact{
