@@ -609,6 +609,7 @@ nav[role=navigation] {
   margin-bottom: 15px; }
 
 .graph {
+  position: relative;
   width: 75%;
   background-color: #000;
   padding: 2px;
@@ -616,7 +617,8 @@ nav[role=navigation] {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -o-border-radius: 10px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  overflow: hidden; }
 
 .graph__title {
   font-family: "Quicksand", sans-serif;
@@ -626,25 +628,72 @@ nav[role=navigation] {
   text-transform: uppercase; }
 
 *[class^="graph__inner"] {
+  position: relative;
+  left: -100%;
   background-color: #db9140;
   height: 15px;
+  width: 100%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px; }
 
-.graph__inner--taxidermy {
-  width: 72%; }
+.g-tax {
+  -webkit-animation: slide-tax 0.7s forwards;
+  -webkit-animation-delay: 0.5s;
+  animation: slide-tax 0.7s forwards;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
 
-.graph__inner--scenic {
-  width: 17%; }
+.g-scenic {
+  -webkit-animation: slide-scenic 0.7s forwards;
+  -webkit-animation-delay: 0.5s;
+  animation: slide-scenic 0.7s forwards;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
 
-.graph__inner--reproductions {
-  width: 8%; }
+.g-rep {
+  -webkit-animation: slide-rep 0.7s forwards;
+  -webkit-animation-delay: 0.5s;
+  animation: slide-rep 0.7s forwards;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
 
-.graph__inner--murals {
-  width: 3%; }
+.g-mural {
+  -webkit-animation: slide-mural 0.7s forwards;
+  -webkit-animation-delay: 0.5s;
+  animation: slide-mural 0.7s forwards;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in; }
 
+@-webkit-keyframes slide-tax {
+  100% {
+    left: -28%; } }
+@keyframes slide-tax {
+  100% {
+    left: -28%; } }
+@-webkit-keyframes slide-scenic {
+  100% {
+    left: -83%; } }
+@keyframes slide-scenic {
+  100% {
+    left: -83%; } }
+@-webkit-keyframes slide-rep {
+  100% {
+    left: -92%; } }
+@keyframes slide-rep {
+  100% {
+    left: -92%; } }
+@-webkit-keyframes slide-mural {
+  100% {
+    left: -97%; } }
+@keyframes slide-mural {
+  100% {
+    left: -97%; } }
 .project__thumbnails h2 {
   margin-left: 1%; }
 
@@ -673,10 +722,10 @@ nav[role=navigation] {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
-    -o-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out; }
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out; }
 
 .project__large,
 .project__medium,
