@@ -48,6 +48,9 @@ nav[role=navigation]{
 			text-transform: uppercase;
 			text-decoration: none;
 			margin: 0 10px;
+			&:hover,&:focus{
+				border-bottom: 3px solid $primaryColor;
+			}
 		}
 	}
 }
@@ -55,6 +58,7 @@ nav[role=navigation]{
 	position: fixed;
 	top: 0;
 	z-index: 2;
+	display: none;
 	padding: 20px 5% !important;
 	nav[role=navigation]{
 		margin: 5px 0 0;
@@ -109,6 +113,11 @@ nav[role=navigation]{
 		vertical-align: top;
 		margin-top: -5px;
 
+	}
+}
+.service__list{
+	li{
+		margin-left: 20px !important;
 	}
 }
 @keyframes draw {
@@ -355,8 +364,20 @@ nav[role=navigation]{
 	color: $primaryColor;
 }
 .recent__thumb{
-	height: 100px;
 	background-color: $secondaryColor;
+	position: relative;
+	img{
+		width: 100%;
+	}
+	&:hover,&:focus{
+		.project__info{
+			opacity: 0.92;
+			svg{
+				opacity: 1;
+				width: 35px;
+			}
+		}
+	}
 }
 .sitemap--work{
 	li{
@@ -418,9 +439,43 @@ GALLERY PAGE
 	}
 }
 .gallery__thumbnail{
-	min-height: 200px;
-	background-color: $secondaryColor
+	// background-color: $secondaryColor;
+	position: relative;
+	img{
+		width: 100%;
+	}
+	&:hover,&:focus{
+		.project__info{
+			opacity: 0.92;
+			svg{
+				opacity: 1;
+				width: 50px;
+			}
+		}
+	}
 }
+.gallery__thumbnail--left{
+	padding: 0 0.7575757575% 0 0;
+	.project__info{
+		width: 97.75757575%;
+	}
+}
+.gallery__thumbnail--right{
+	padding: 0 0 0 0.6775757575%;
+}
+
+
+.service__wrap{
+	h2{
+		margin-bottom: 20px;
+	}
+	.service__info{
+		p{
+			margin-bottom: 20px;
+		}
+	}
+}
+
 
 
 .footer__contact{

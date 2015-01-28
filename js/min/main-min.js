@@ -1,0 +1,1 @@
+var mywindow=$(window),mypos=mywindow.scrollTop(),up=!1,newscroll;mywindow.scroll(function(){return newscroll=mywindow.scrollTop(),newscroll>300&&!up?($(".phantom").fadeIn(300),up=!up,console.log(up)):300>newscroll&&up&&($(".phantom").fadeOut(150),up=!up),mypos=newscroll,!1});
