@@ -31,19 +31,24 @@ $(document).ready(function() {
 
             /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
-
-                //Code to initialize the graph here.
-                //This initialization should probably
-                //be deferred, to ensure performance,
-                //and the graphs should be marked as
-                //initialized so we dont't init them
-                //multiple times (possibly by changing
-                //their class so .each ignores them).
-        				$('.graph__inner--taxidermy').addClass('g-tax');
-        				$('.graph__inner--scenic').addClass('g-scenic');
-        				$('.graph__inner--reproductions').addClass('g-rep');
-        				$('.graph__inner--murals').addClass('g-mural');
+				$('.graph__inner--taxidermy').addClass('g-tax');
+				$('.graph__inner--scenic').addClass('g-scenic');
+				$('.graph__inner--reproductions').addClass('g-rep');
+				$('.graph__inner--murals').addClass('g-mural');
             }            
         });     
     });    
+});
+
+$(document).ready(function () {
+	var checkURL = ['#kel', '#levi', '#cheesh'];
+
+	// if(window.location.href.indexOf({("#value1", "#value2", "#value3", "#value4")}) > -1) {
+	// 	alert("IT WORKS");
+	// }
+	for (var i = 0; i < checkURL.length; i++) {
+        if(window.location.href.indexOf(checkURL[i]) > -1) {
+            alert("your url contains the string "+checkURL[i]);
+        }
+    }
 });
