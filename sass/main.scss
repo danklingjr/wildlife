@@ -190,36 +190,36 @@ nav[role=navigation]{
 // }
 
 .g-tax{
-	-webkit-animation: slide-tax 0.7s forwards;
+	-webkit-animation: slide-tax 0.8s forwards;
   -webkit-animation-delay: 0.5s;
-  animation: slide-tax 0.7s forwards;
+  animation: slide-tax 0.8s forwards;
   animation-delay: 0.5s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 .g-scenic{
-	-webkit-animation: slide-scenic 0.7s forwards;
+	-webkit-animation: slide-scenic 0.8s forwards;
   -webkit-animation-delay: 0.5s;
-  animation: slide-scenic 0.7s forwards;
+  animation: slide-scenic 0.8s forwards;
   animation-delay: 0.5s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 .g-rep{
-	-webkit-animation: slide-rep 0.7s forwards;
+	-webkit-animation: slide-rep 0.8s forwards;
   -webkit-animation-delay: 0.5s;
-  animation: slide-rep 0.7s forwards;
+  animation: slide-rep 0.8s forwards;
   animation-delay: 0.5s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 .g-mural{
-	-webkit-animation: slide-mural 0.7s forwards;
+	-webkit-animation: slide-mural 0.8s forwards;
   -webkit-animation-delay: 0.5s;
-  animation: slide-mural 0.7s forwards;
+  animation: slide-mural 0.8s forwards;
   animation-delay: 0.5s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 @-webkit-keyframes slide-tax {
     100% { left: -28%; }
@@ -263,7 +263,7 @@ nav[role=navigation]{
 	@include prefix(transition, 0.2s ease-in-out);
 	svg{
 		opacity: 0;
-		width: 10px;
+		width: 25px;
 		stroke: #fff;
 		stroke-width:3;
 		stroke-linejoin:round;
@@ -549,7 +549,8 @@ GALLERY PAGE
 }
 
 
-.service__wrap{
+.service__wrap,
+.about__wrap{
 	h2{
 		margin-bottom: 20px;
 	}
@@ -559,7 +560,20 @@ GALLERY PAGE
 		}
 	}
 }
+.about__wrap{
+	margin-bottom: 60px;
+}
 
+.about__info{
+	p{
+		margin-bottom: 20px; 
+	}
+}
+.about__graphic{
+	img{
+		width: 100%;
+	}
+}
 
 .project{
 	background-color: $secondaryColor;
