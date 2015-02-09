@@ -648,36 +648,36 @@ nav[role=navigation] {
   border-radius: 10px; }
 
 .g-tax {
-  -webkit-animation: slide-tax 0.7s forwards;
+  -webkit-animation: slide-tax 0.8s forwards;
   -webkit-animation-delay: 0.5s;
-  animation: slide-tax 0.7s forwards;
+  animation: slide-tax 0.8s forwards;
   animation-delay: 0.5s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in; }
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
 
 .g-scenic {
-  -webkit-animation: slide-scenic 0.7s forwards;
+  -webkit-animation: slide-scenic 0.8s forwards;
   -webkit-animation-delay: 0.5s;
-  animation: slide-scenic 0.7s forwards;
+  animation: slide-scenic 0.8s forwards;
   animation-delay: 0.5s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in; }
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
 
 .g-rep {
-  -webkit-animation: slide-rep 0.7s forwards;
+  -webkit-animation: slide-rep 0.8s forwards;
   -webkit-animation-delay: 0.5s;
-  animation: slide-rep 0.7s forwards;
+  animation: slide-rep 0.8s forwards;
   animation-delay: 0.5s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in; }
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
 
 .g-mural {
-  -webkit-animation: slide-mural 0.7s forwards;
+  -webkit-animation: slide-mural 0.8s forwards;
   -webkit-animation-delay: 0.5s;
-  animation: slide-mural 0.7s forwards;
+  animation: slide-mural 0.8s forwards;
   animation-delay: 0.5s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in; }
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
 
 @-webkit-keyframes slide-tax {
   100% {
@@ -720,7 +720,7 @@ nav[role=navigation] {
   transition: 0.2s ease-in-out; }
   .project__info svg {
     opacity: 0;
-    width: 10px;
+    width: 25px;
     stroke: #fff;
     stroke-width: 3;
     stroke-linejoin: round;
@@ -971,8 +971,10 @@ GALLERY PAGE
 .gallery__thumbnail--right {
   padding: 0 0 0 0.6775757575%; }
 
-.service__wrap h2 {
+.service__wrap h2,
+.about__wrap h2 {
   margin-bottom: 20px; }
+<<<<<<< Updated upstream
 .service__wrap .service__info--page p {
   margin-bottom: 20px; }
 
@@ -1003,6 +1005,20 @@ GALLERY PAGE
     font-size: 0.875em;
     color: #656565;
     margin-bottom: 20px; }
+=======
+.service__wrap .service__info p,
+.about__wrap .service__info p {
+  margin-bottom: 20px; }
+
+.about__wrap {
+  margin-bottom: 60px; }
+
+.about__info p {
+  margin-bottom: 20px; }
+
+.about__graphic img {
+  width: 100%; }
+>>>>>>> Stashed changes
 
 .footer__contact form input[type=text], .footer__contact form textarea {
   display: block;
